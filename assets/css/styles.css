@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* Fuente */
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+    color: var(--color-text);
+}
+
+:root{
+    --color-primary: #2E5D3F;
+    --color-secondary: #A67B5B;
+    --color-neutral: #FFF8E7;
+    --color-text: #333333;
+}
+
+body{
+    background-color: var(--color-neutral);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #1A3D5D;
+}
+
+header div{
+    margin: auto;
+    min-height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+header div p{
+    color: var(--color-neutral);
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    background-color: var(--color-secondary);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 6em; 
+    margin: 0 0 0 2em;
+}
+
+nav a{
+    color: var(--color-neutral);
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;                            
+    margin: 0 auto; 
+}
+
+.banner img{
+    width: 100%;
+    
+}
+
+.book-slider{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    
+}
+
+.book-slider-div img{
+    width: 300px;
+}
