@@ -1,0 +1,53 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "name": "Odisea",
+      "image": "./img/Catalogo/odisea.jpg",
+      "author": "Homero",
+      "precio": 2500
+    },
+    {
+      "id": "2",
+      "name": "Lolita",
+      "image": "./img/Catalogo/lolita.jpg",
+      "author": "Vladimir Nabokov",
+      "precio": 3000
+    },
+    {
+      "id": "3",
+      "name": "Las aventuras de Alicia en el país de las maravillas",
+      "image": "./img/Catalogo/alicia_en_el_pais_de_las_maravillas.jpg",
+      "author": "Lewis Carroll",
+      "precio": 1300
+    },
+    {
+      "id": "4",
+      "name": "20.000 leguas de viaje submarino",
+      "image": "./img/Catalogo/20000_leguas_de_viaje_submarino.jpg",
+      "author": "Julio Verne",
+      "precio": 4500
+    },
+    {
+      "id": "5",
+      "name": "Orgullo y prejuicio",
+      "image": "./img/Catalogo/orgullo_y_prejuicio.jpg",
+      "author": "Jane Austen",
+      "precio": 2000
+    },
+    {
+      "id": "6",
+      "name": "Divina comedia",
+      "image": "./img/Catalogo/divina_comedia.jpg",
+      "author": "Dante Alighieri",
+      "precio": 6000
+    },
+    {
+      "id": "7",
+      "name": "Las aventuras de Pinocho",
+      "image": "./img/Catalogo/pinocho.jpg",
+      "author": "Carlo Collodi",
+      "precio": 2300
+    }
+  ]
+}
