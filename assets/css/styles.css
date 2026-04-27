@@ -49,7 +49,7 @@ nav ul {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 6em;
+  gap: 3em;
   margin: 0 0 0 2em;
 }
 
@@ -69,23 +69,47 @@ main {
 }
 
 .informacion {
-  width: 95%;
+  width: 80%;
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5em;
   padding: 20px;
   margin: 0 auto;
   box-sizing: border-box;
+  
 }
 
+
 .contenedor {
-  height: 350px;
+  height: 150px;
   background-color: var(--color-secondary);
   padding: 5px;
   border: solid 2px var(--color-text);
   border-radius: 10px;
   box-shadow: 5px 5px 5px var(--color-secondary);
   font-size: 23px;
+  overflow: hidden;
+}
+
+.full{
+  grid-column: span 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background-color: var(--color-neutral);
+}
+
+.contenedor.mitad{
+  grid-column: span 2;
+  font-size: 1.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor.cuarto{
+  grid-column: span 1;
 }
 
 .imagen {
