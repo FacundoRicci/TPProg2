@@ -22,24 +22,49 @@
         </nav>
     </header>
     <main>
-        <form class="formulario">
+        <form id="formularioLogin">
             <fieldset class="datos">
                 <legend>Iniciar Sesion</legend>
-                <label for="">Usuario: </label>
-                <input type="text" placeholder="Juanito123">
-                <br>
-                <label for="">Contraseña: </label>
-                <input type="password" placeholder="************">
-                <br>
-                <label for="">Repetir contraseña: </label>
-                <input type="password" placeholder="************">
-                <br>
-                <label for="">Email: </label>
-                <input type="email" placeholder="Ejemplo@mail.com">
+                
+                <div class="contenedorLogin">
+                    <label>Usuario: </label>
+                    <input type="text" placeholder="Juanito123">
+                </div>
+                <div class="contenedorLogin">
+                    <label>Contraseña: </label>
+                    <input type="password" placeholder="************">
+                </div>
+                <button class="botonSubmit" id="btnLogin">Login</button>
+                <p><strong>No tienes cuenta?</strong></p>
+                <button type="button" id="btnCambioRegistrar">Registrarse</button>
             </fieldset>
-            <p><strong>No tienes cuenta?</strong></p>
-            <a href="">Registrarse</a>
         </form>
+        
+        <form id="formularioRegistrarse" class="invisible">
+            <fieldset class="datos">
+                <legend>Registrarse</legend>
+                <div class="contenedorRegistrarse">
+                    <label>Usuario: </label>
+                    <input type="text" placeholder="Juanito123">
+                </div>
+                <div class="contenedorRegistrarse">
+                    <label>Contraseña: </label>
+                    <input type="password" placeholder="************">
+                </div>
+                <div class="contenedorRegistrarse">
+                    <label>Repetir Contraseña: </label>
+                    <input type="password" placeholder="************">
+                </div>
+                <div class="contenedorRegistrarse">
+                    <label>Email: </label>
+                    <input type="ema" placeholder="Ejemplo@email.com">
+                </div>
+                <button class="botonSubmit" id="brnRegistrarse">Registrarse</button>
+                <p><strong>Ya tienes cuenta?</strong></p>
+                <button type="button" id="btnCambioLogin">Login</button>
+            </fieldset>
+        </form>
+        <script src="../js/login.js"></script>
     </main>
 
     <footer></footer>
