@@ -42,19 +42,22 @@ nav {
   align-items: center;
   justify-content: center;
   min-height: 70px;
-  background-color: var(--color-secondary);
+  background-color: whitesmoke;
+  box-shadow: 1px 11px 111px 1px var(--color-text);
+
 }
 
 nav ul {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 6em;
+  gap: 3em;
   margin: 0 0 0 2em;
 }
 
 nav a {
-  color: var(--color-neutral);
+  color: var(--color-text);
+  font-weight: 600;
 }
 
 #carrito {
@@ -69,34 +72,75 @@ main {
 }
 
 .informacion {
-  width: 95%;
+  width: 80%;
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5em;
   padding: 20px;
   margin: 0 auto;
   box-sizing: border-box;
+  
 }
+
 
 .contenedor {
-  height: 350px;
-  background-color: var(--color-secondary);
-  padding: 5px;
-  border: solid 2px var(--color-text);
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px var(--color-secondary);
+  height: 150px;
   font-size: 23px;
+  overflow: hidden;
 }
 
-.imagen {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
+.full{
+  grid-column: span 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8em;
 }
 
-.banner img {
-  width: 100%;
+.contenedor.mitad{
+  grid-column: span 2;
+  font-size: 1.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.contenedor.mitad.dos{
+  background-image: url(/assets/img/img\ 1\ section.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contenedor.cuarto{
+  grid-column: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor.cuarto.uno{
+  background-image: url(/assets/img/img\ 2\ section\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contenedor.cuarto.cuatro{
+  background-image: url(/assets/img/img\ 3\ section\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.contenedor.bann{
+  background-image: url("../img/banner-img.jpg");
+  background-size: cover;
+  background-position: 100% 30%;
+  min-height: 580px;
+  margin: 3em 1.5em ;
+  box-shadow: 5px 5px 10px 0px var(--color-text);
+ 
+}
+
 
 .book-slider {
   display: flex;
