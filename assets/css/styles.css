@@ -21,43 +21,55 @@ body {
   background-color: var(--color-neutral);
 }
 
-header {
+header{
   display: flex;
-  flex-direction: column;
-  background-color: #1a3d5d;
-}
-
-header div {
-  margin: auto;
-  min-height: 30px;
   justify-content: center;
-  align-items: center;
-}
-header div p {
-  color: var(--color-neutral);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 70px;
-  background-color: whitesmoke;
+  background-color: white;
   box-shadow: 1px 11px 111px 1px var(--color-text);
-
 }
-
-nav ul {
-  display: flex;
-  list-style: none;
+nav {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   align-items: center;
-  gap: 3em;
-  margin: 0 0 0 2em;
+  width: 80%;
+  min-height: 100px;
+  margin: auto;
+  
 }
 
 nav a {
   color: var(--color-text);
-  font-weight: 600;
+  font-weight: 450;
+}
+
+nav img{
+  width: 13%;
+}
+
+.nav-a-href-2 h1{
+  font-size: 1em;
+  font-weight: 540;
+}
+
+.nav-a-href-2 span{
+  color: var(--color-secondary);
+}
+
+.nav-a-href-2 a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+nav ul{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+nav li{
+  list-style: none;
 }
 
 #carrito {
@@ -67,8 +79,16 @@ nav a {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+}
+
+.contenedor.bann{
+  background-image: url("../img/banner-img.jpg");
+  background-size: cover;
+  background-position: 100% 30%;
+  min-height: 580px;
+  margin: 1.5em 1.5em ;
+  box-shadow: 5px 5px 10px 0px var(--color-text);
+ 
 }
 
 .informacion {
@@ -76,17 +96,13 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5em;
-  padding: 20px;
-  margin: 0 auto;
+  margin: auto;
   box-sizing: border-box;
   
 }
 
-
-.contenedor {
-  height: 150px;
-  font-size: 23px;
-  overflow: hidden;
+.informacion h2{
+  font-size: 1.5em;
 }
 
 .full{
@@ -131,24 +147,57 @@ main {
 }
 
 
-.contenedor.bann{
-  background-image: url("../img/banner-img.jpg");
-  background-size: cover;
-  background-position: 100% 30%;
-  min-height: 580px;
-  margin: 3em 1.5em ;
-  box-shadow: 5px 5px 10px 0px var(--color-text);
- 
+
+
+.mas-vendidos{
+  background-color: var(--color-primary);
+  /* justify-content: center; */
+  
 }
 
+.mas-vendidos.contenedor.h2{
+  background-color: var(--color-primary);
+}
 
-.book-slider {
-  display: flex;
+.mas-vendidos h2{
+  font-size: 3em;
+  color: var(--color-neutral);
+}
+
+.mas-vendidos-contenedor-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 80%;
-  justify-content: space-between;
+  justify-content: center;
   margin: auto;
 }
 
-.book-slider-div img {
-  width: 250px;
+.mas-vendidos.contenedor{
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 1em;
+  gap: 1em;
+  background-color: white;  
+  height: auto;
+  width: 100%;
+  margin: 0;
 }
+
+.mas-vendidos.contenedor img{
+  width: 100%;
+  border-radius: 15px;
+  
+}
+
+.section-footer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
