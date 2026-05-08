@@ -10,6 +10,10 @@
   color: var(--color-text);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-primary: #2e5d3f;
   --color-secondary: #a67b5b;
@@ -38,8 +42,15 @@ nav {
 }
 
 nav a {
+  display: inline-block;
   color: var(--color-text);
   font-weight: 450;
+  transition: color 0.3s ease, transform 0.5s ease;;
+}
+
+nav a:hover {
+  color: var(--color-secondary); 
+  transform: scale(1.1);
 }
 
 nav img{
@@ -86,7 +97,7 @@ main {
   background-size: cover;
   background-position: 100% 30%;
   min-height: 580px;
-  margin: 1.5em 1.5em ;
+  /* margin: 1.5em 0 1.5em 0 ; */
   box-shadow: 5px 5px 10px 0px var(--color-text);
  
 }
@@ -98,11 +109,23 @@ main {
   gap: 1.5em;
   margin: auto;
   box-sizing: border-box;
+  padding: 5em 0 3em 0;
   
 }
 
 .informacion h2{
   font-size: 1.5em;
+}
+
+
+.contenedor.mitad{
+  grid-column: span 2;
+  font-size: 1.7em;
+}
+
+.contenedor.cuarto{
+  font-size: 1.3em;
+  width: 100%;
 }
 
 .full{
@@ -112,78 +135,73 @@ main {
   align-items: center;
   font-size: 2.8em;
 }
-
-.contenedor.mitad{
-  grid-column: span 2;
-  font-size: 1.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .contenedor.mitad.dos{
-  background-image: url(/assets/img/img\ 1\ section.jpg);
+  background-image: url(../img/img\ 1\ section.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .contenedor.cuarto{
   grid-column: span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .contenedor.cuarto.uno{
-  background-image: url(/assets/img/img\ 2\ section\ 1.jpg);
+  background-image: url(../img/img\ 2\ section\ 1.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .contenedor.cuarto.cuatro{
-  background-image: url(/assets/img/img\ 3\ section\ 1.jpg);
+  background-image: url(../img/img\ 3\ section\ 1.jpg);
   background-size: cover;
   background-position: center;
 }
 
-
-
-
 .mas-vendidos{
   background-color: var(--color-primary);
-  /* justify-content: center; */
-  
+  padding: 2em 0 4em 0;
+  margin: 6em 0 6em 0;
 }
 
 .mas-vendidos.contenedor.h2{
   background-color: var(--color-primary);
+  justify-content: center;
+  align-items: center;
 }
 
 .mas-vendidos h2{
   font-size: 3em;
   color: var(--color-neutral);
+  margin: 1em 0 2em;
 }
 
 .mas-vendidos-contenedor-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 80%;
-  justify-content: center;
   margin: auto;
+  gap: 2em; 
+  box-sizing: border-box;
 }
 
 .mas-vendidos.contenedor{
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+  align-items: flex-start; 
+  text-align: left;
   padding: 1em;
   gap: 1em;
-  background-color: white;  
-  height: auto;
-  width: 100%;
-  margin: 0;
+  background-color: white;
+  border-radius: 10px;
+  width: 60%; 
+  margin: auto;
+  min-height: 400px;
+}
+
+.precio {
+  margin-left: 0.4em;
+  font-size: 1.2em;
 }
 
 .mas-vendidos.contenedor img{
@@ -192,11 +210,37 @@ main {
   
 }
 
+.quienes-somos {
+  width: 80%;
+  margin: 3em auto;
+  padding: 2em;
+  background-color: var(--color-secondary);
+  color: var(--color-neutral);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.quienes-somos h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.quienes-somos p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
 .section-footer{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 80%;
   margin: auto;
+  padding: 2em;
+  font-size: 1.2em;
+  
   justify-content: space-between;
   box-sizing: border-box;
 }
