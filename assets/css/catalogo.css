@@ -67,3 +67,63 @@ main {
   justify-content: center;
   margin: 0 auto;
 }
+
+.catalogo{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.producto{
+  min-height: 420px;
+  width: 220px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.producto:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.imagen-producto{
+  width: 300px;
+  height: 200px;
+  
+}
+
+.titulo-producto{
+  font-size: larger;
+  font-weight: 900;
+}
+
+.autor-producto{
+  font-style: italic;
+}
+
+.precio{
+  font-weight: 600;
+}
+
+.btn-agregar{
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  margin: 10px;
+  margin-top: auto;
+  transition: transform 0.2s ease;
+}
+
+.btn-agregar:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
