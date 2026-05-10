@@ -68,6 +68,13 @@ main {
   margin: 0 auto;
 }
 
+.titulo-principal{
+  text-align: center;
+  font-size: 50px;
+  margin: 30px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 .catalogo{
   display: flex;
   flex-wrap: wrap;
@@ -121,6 +128,7 @@ main {
   color: white;
   margin: 10px;
   margin-top: auto;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.4);
   transition: transform 0.2s ease;
 }
 
