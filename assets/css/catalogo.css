@@ -94,9 +94,10 @@ main {
 }
 
 .imagen-producto{
-  width: 300px;
+  width: auto;
   height: 200px;
-  
+  object-fit:contain;
+  margin: 10px 0;
 }
 
 .titulo-producto{
