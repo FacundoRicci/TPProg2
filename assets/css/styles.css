@@ -10,6 +10,10 @@
   color: var(--color-text);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-primary: #2e5d3f;
   --color-secondary: #a67b5b;
@@ -21,43 +25,62 @@ body {
   background-color: var(--color-neutral);
 }
 
-header {
+header{
   display: flex;
-  flex-direction: column;
-  background-color: #1a3d5d;
-}
-
-header div {
-  margin: auto;
-  min-height: 30px;
   justify-content: center;
-  align-items: center;
-}
-header div p {
-  color: var(--color-neutral);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 70px;
-  background-color: whitesmoke;
+  background-color: white;
   box-shadow: 1px 11px 111px 1px var(--color-text);
-
 }
-
-nav ul {
-  display: flex;
-  list-style: none;
+nav {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   align-items: center;
-  gap: 3em;
-  margin: 0 0 0 2em;
+  width: 80%;
+  min-height: 100px;
+  margin: auto;
+  
 }
 
 nav a {
+  display: inline-block;
   color: var(--color-text);
-  font-weight: 600;
+  font-weight: 450;
+  transition: color 0.3s ease, transform 0.5s ease;;
+}
+
+nav a:hover {
+  color: var(--color-secondary); 
+  transform: scale(1.1);
+}
+
+nav img{
+  width: 13%;
+}
+
+.nav-a-href-2 h1{
+  font-size: 1em;
+  font-weight: 540;
+}
+
+.nav-a-href-2 span{
+  color: var(--color-secondary);
+}
+
+.nav-a-href-2 a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+nav ul{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+nav li{
+  list-style: none;
 }
 
 #carrito {
@@ -67,8 +90,16 @@ nav a {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+}
+
+.contenedor.bann{
+  background-image: url("../img/banner-img.jpg");
+  background-size: cover;
+  background-position: 100% 30%;
+  min-height: 580px;
+  /* margin: 1.5em 0 1.5em 0 ; */
+  box-shadow: 5px 5px 10px 0px var(--color-text);
+ 
 }
 
 .informacion {
@@ -76,17 +107,25 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5em;
-  padding: 20px;
-  margin: 0 auto;
+  margin: auto;
   box-sizing: border-box;
+  padding: 5em 0 3em 0;
   
 }
 
+.informacion h2{
+  font-size: 1.5em;
+}
 
-.contenedor {
-  height: 150px;
-  font-size: 23px;
-  overflow: hidden;
+
+.contenedor.mitad{
+  grid-column: span 2;
+  font-size: 1.7em;
+}
+
+.contenedor.cuarto{
+  font-size: 1.3em;
+  width: 100%;
 }
 
 .full{
@@ -96,59 +135,113 @@ main {
   align-items: center;
   font-size: 2.8em;
 }
-
-.contenedor.mitad{
-  grid-column: span 2;
-  font-size: 1.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .contenedor.mitad.dos{
-  background-image: url(/assets/img/img\ 1\ section.jpg);
+  background-image: url(../img/img\ 1\ section.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .contenedor.cuarto{
   grid-column: span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .contenedor.cuarto.uno{
-  background-image: url(/assets/img/img\ 2\ section\ 1.jpg);
+  background-image: url(../img/img\ 2\ section\ 1.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .contenedor.cuarto.cuatro{
-  background-image: url(/assets/img/img\ 3\ section\ 1.jpg);
+  background-image: url(../img/img\ 3\ section\ 1.jpg);
   background-size: cover;
   background-position: center;
 }
 
-
-.contenedor.bann{
-  background-image: url("../img/banner-img.jpg");
-  background-size: cover;
-  background-position: 100% 30%;
-  min-height: 580px;
-  margin: 3em 1.5em ;
-  box-shadow: 5px 5px 10px 0px var(--color-text);
- 
+.mas-vendidos{
+  background-color: var(--color-primary);
+  padding: 2em 0 4em 0;
+  margin: 6em 0 6em 0;
 }
 
+.mas-vendidos.contenedor.h2{
+  background-color: var(--color-primary);
+  justify-content: center;
+  align-items: center;
+}
 
-.book-slider {
-  display: flex;
+.mas-vendidos h2{
+  font-size: 3em;
+  color: var(--color-neutral);
+  margin: 1em 0 2em;
+}
+
+.mas-vendidos-contenedor-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 80%;
-  justify-content: space-between;
   margin: auto;
+  gap: 2em; 
+  box-sizing: border-box;
 }
 
-.book-slider-div img {
-  width: 250px;
+.mas-vendidos.contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start; 
+  text-align: left;
+  padding: 1em;
+  gap: 1em;
+  background-color: white;
+  border-radius: 10px;
+  width: 60%; 
+  margin: auto;
+  min-height: 400px;
 }
+
+.precio {
+  margin-left: 0.4em;
+  font-size: 1.2em;
+}
+
+.mas-vendidos.contenedor img{
+  width: 100%;
+  border-radius: 15px;
+  
+}
+
+.quienes-somos {
+  width: 80%;
+  margin: 3em auto;
+  padding: 2em;
+  background-color: var(--color-secondary);
+  color: var(--color-neutral);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.quienes-somos h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.quienes-somos p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+.section-footer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: auto;
+  padding: 2em;
+  font-size: 1.2em;
+  
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+

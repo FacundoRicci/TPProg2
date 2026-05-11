@@ -28,12 +28,15 @@
                 
                 <div class="contenedorLogin">
                     <label>Usuario: </label>
-                    <input type="text" placeholder="Juanito123">
+                    <input id="usuarioLogin" type="text" placeholder="Juanito123">
+                    <p class="mensajeError" id="mensajeErrorLoginUsuario"></p>
                 </div>
                 <div class="contenedorLogin">
                     <label>Contraseña: </label>
-                    <input type="password" placeholder="************">
+                    <input id="contrasenaLogin" type="password" placeholder="************">
+                    <p class="mensajeError" id="mensajeErrorLoginContrasena"></p>
                 </div>
+                
                 <button class="botonSubmit" id="btnLogin">Login</button>
                 <p><strong>No tienes cuenta?</strong></p>
                 <button type="button" id="btnCambioRegistrar">Registrarse</button>
@@ -45,19 +48,22 @@
                 <legend>Registrarse</legend>
                 <div class="contenedorRegistrarse">
                     <label>Usuario: </label>
-                    <input type="text" placeholder="Juanito123">
+                    <input id="usuarioRegistro" type="text" placeholder="Juanito123">
+                    <p class="mensajeError" id="mensajeErrorRegistroUsuario"></p>
                 </div>
                 <div class="contenedorRegistrarse">
                     <label>Contraseña: </label>
-                    <input type="password" placeholder="************">
+                    <input id="contrasenaRegistro" type="password" placeholder="************">
+                    <p class="mensajeError" id="mensajeErrorRegistroContrasena"></p>
                 </div>
                 <div class="contenedorRegistrarse">
                     <label>Repetir Contraseña: </label>
-                    <input type="password" placeholder="************">
+                    <input id="repetirContrasenaRegistro" type="password" placeholder="************">
+                    <p class="mensajeError" id="mensajeErrorRegistroRepetirContrasena"></p>
                 </div>
                 <div class="contenedorRegistrarse">
                     <label>Email: </label>
-                    <input type="ema" placeholder="Ejemplo@email.com">
+                    <input type="email" placeholder="Ejemplo@email.com">
                 </div>
                 <button class="botonSubmit" id="brnRegistrarse">Registrarse</button>
                 <p><strong>Ya tienes cuenta?</strong></p>

@@ -49,5 +49,13 @@
       "author": "Carlo Collodi",
       "precio": 2300
     }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "usuario": "admin",
+      "constrasena": "admin",
+      "email": "admin@email.com"
+    }
   ]
 }
