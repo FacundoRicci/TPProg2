@@ -11,7 +11,7 @@ fetch("/db.json")
                     <img class="imagen-producto" src="${libro.image}">
                     <p class="titulo-producto">${libro.name}</p>
                     <p class="autor-producto">${libro.author}</p>
-                    <p class="precio">${libro.precio}</p>
+                    <p class="precio">$${libro.precio}</p>
                     <button class="btn-agregar" id="agregarCarrito">Agregar al carrito</button>
                 </div>
             `;
