@@ -18,6 +18,8 @@
                 <li><a href="">COMO COMPRAR</a></li>
                 <li><a href="../files/catalogo.html">CATALOGO</a></li>
                 <li><a href="">CONTACTO</a></li>
+                <li id="iniciarSesion" class=""><a href="./login.html">INICIAR SESION</a></li>
+                <li><button id="cerrarSesion" class="invisible">CERRAR SESION</button></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +27,7 @@
         <form id="formularioLogin">
             <fieldset class="datos">
                 <legend>Iniciar Sesion</legend>
-                
+                <p class="mensajeError" id="mensajeErrorLoginGeneral"></p>
                 <div class="contenedorLogin">
                     <label>Usuario: </label>
                     <input id="usuarioLogin" type="text" placeholder="Juanito123">
@@ -37,7 +39,7 @@
                     <p class="mensajeError" id="mensajeErrorLoginContrasena"></p>
                 </div>
                 
-                <button class="botonSubmit" id="btnLogin">Login</button>
+                <button class="botonSubmit" id="btnLogin" type="button">Login</button>
                 <p><strong>No tienes cuenta?</strong></p>
                 <button type="button" id="btnCambioRegistrar">Registrarse</button>
             </fieldset>
@@ -46,6 +48,7 @@
         <form id="formularioRegistrarse" class="invisible">
             <fieldset class="datos">
                 <legend>Registrarse</legend>
+                <p class="mensajeError" id="mensajeErrorRegistroGeneral"></p>
                 <div class="contenedorRegistrarse">
                     <label>Usuario: </label>
                     <input id="usuarioRegistro" type="text" placeholder="Juanito123">
@@ -63,13 +66,16 @@
                 </div>
                 <div class="contenedorRegistrarse">
                     <label>Email: </label>
-                    <input type="email" placeholder="Ejemplo@email.com">
+                    <input id="emailRegistro" type="email" placeholder="Ejemplo@email.com">
                 </div>
-                <button class="botonSubmit" id="brnRegistrarse">Registrarse</button>
+                <button class="botonSubmit" type="button" id="btnRegistrarse">Registrarse</button>
                 <p><strong>Ya tienes cuenta?</strong></p>
                 <button type="button" id="btnCambioLogin">Login</button>
             </fieldset>
         </form>
+        <div id="cartelBienvenida" class="invisible">
+            <p class="cartel" id="textoCartel"></p>
+        </div>
         <script src="../js/login.js"></script>
     </main>
 
