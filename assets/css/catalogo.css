@@ -21,45 +21,7 @@ body {
   background-color: var(--color-neutral);
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  background-color: #1a3d5d;
-}
 
-header div {
-  margin: auto;
-  min-height: 30px;
-  justify-content: center;
-  align-items: center;
-}
-header div p {
-  color: var(--color-neutral);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 70px;
-  background-color: var(--color-secondary);
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  gap: 6em;
-  margin: 0 0 0 2em;
-}
-
-nav a {
-  color: var(--color-neutral);
-}
-
-#carrito {
-  width: 30px;
-}
 
 main {
   display: flex;

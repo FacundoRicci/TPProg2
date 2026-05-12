@@ -245,3 +245,64 @@ main {
   box-sizing: border-box;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .nav-a-href-2 {
+  order: -1; 
+  }
+  .contenedor.bann{
+    min-height: 400px;
+  }
+
+  .informacion{
+    display: grid;
+    grid-template-columns: 2fr;
+  }
+
+  .full{
+    grid-column: span 2;  
+    font-size: 2.5em;
+  }
+
+  .contenedor.mitad.dos{
+    display: none;
+  }
+
+  .contenedor.cuarto.uno{
+    width: 300px;
+  }
+
+  .contenedor.cuarto.cuatro{
+    width: 300px;
+  }
+
+  .mas-vendidos.contenedor.h2{
+    font-size: 1em;
+    
+    
+  }
+
+  .mas-vendidos-contenedor-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+
+  .mas-vendidos.contenedor{
+    width: 80%;
+  }
+
+
+  .section-footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    font-size: 0.8em;
+  }
+
+  .section-footer h5{
+    font-size: 1.3em;
+  }
+
+
+}
