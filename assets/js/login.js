@@ -123,7 +123,7 @@ function comprobarLog() {
     if (logueado === "si") {
         formularioLogin.classList.toggle("invisible");
         cartelBienvenida.classList.toggle("invisible");
-        iniciarSesion.classList.toggle("invisible");
+        //iniciarSesion.classList.toggle("invisible");
         textoCartel.textContent = ("Bienvenido a la tienda online " + usuarioLogueado + "!");
         btnCerrarSesion.classList.toggle("invisible");
     }

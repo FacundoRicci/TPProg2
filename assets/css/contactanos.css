@@ -88,3 +88,7 @@ body {
 .comunicate img{
     width: 20px;
 }
+
+.invisible {
+  display: none !important;
+}

@@ -1,9 +1,4 @@
-if (localStorage.getItem("login")) {
-  if (localStorage.getItem("login") === "0") {
-  }
-} else {
-  localStorage.setItem("login", 0);
-}
+
 
 /* Insertar dinamicamente el nav y footer en todas las paginas */
 document.addEventListener('DOMContentLoaded',()=>{
@@ -28,8 +23,9 @@ document.addEventListener('DOMContentLoaded',()=>{
             <ul class="nav-a-href-3">
                 <li><a href="./assets/files/login.html">INICIAR SESION</a></li>
                 <li><a href=""><img src="../assets/img/carrito.png" alt="carrito" id="carrito"></a></li>
-
+                <li><button id="cerrarSesion" class="invisible">CERRAR SESION</button></li>
             </ul> 
+            
         </nav>
     </header>
     `);
@@ -78,3 +74,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     </footer>
       `)
 })
+
+const btnCerrarSesion = document.querySelector("#cerrarSesion")
+
+
+if(localStorage.getItem("logueado") === "si"){
+    btnCerrarSesion.classList.toggle("invisible");
+}
