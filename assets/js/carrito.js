@@ -8,7 +8,7 @@ let precioTotal = 0;
 renderizarCarrito();
 
 function renderizarCarrito(){
-
+    
     contenedorPrincipal.innerHTML = "";
 
     cantidadProductos = 0;
@@ -25,6 +25,7 @@ function renderizarCarrito(){
             <p class="titulo-producto">${libro.name}</p>
             <p class="autor-producto">${libro.author}</p>
             <p class="precio">${libro.precio}</p>
+            <p>Cantidad: ${libro.cantidad}</p>
             <button class="btn btn-quitar">Quitar</button>
         `;
 
@@ -34,8 +35,8 @@ function renderizarCarrito(){
             quitarLibro(libro.id);
         });
 
-        cantidadProductos++;
-        precioTotal += libro.precio;
+        cantidadProductos += libro.cantidad;
+        precioTotal += libro.precio * libro.cantidad;
         contenedorPrincipal.appendChild(div);
     });
     renderizarPrecios();
@@ -44,7 +45,14 @@ function renderizarCarrito(){
 
 function quitarLibro(id){
 
-    carrito = carrito.filter(libro => libro.id !== id);
+    const libro = carrito.find(item => item.id === id);
+
+    if(libro.cantidad > 1){
+        libro.cantidad--;
+    } else {
+        carrito = carrito.filter(item => item.id !== id);
+    }
+
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
 

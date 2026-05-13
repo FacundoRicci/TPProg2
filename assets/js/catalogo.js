@@ -34,7 +34,16 @@ fetch("/db.json")
 function agregarCarrito(libro){
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    carrito.push(libro);
+    const libroExistente = carrito.find(item => item.id === libro.id);
+
+    if(libroExistente){
+        libroExistente.cantidad++;
+    } else {
+        carrito.push({
+            ...libro,
+            cantidad: 1
+        });
+    }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
