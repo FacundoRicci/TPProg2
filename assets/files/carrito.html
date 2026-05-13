@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo</title>
-    <link rel="stylesheet" href="../css/catalogo.css">
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/assets/css/carrito.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -16,7 +13,7 @@
                 <li><a href="../../index.html">INICIO</a></li>
                 <li><a href="">QUIENES SOMOS</a></li>
                 <li><a href="">COMO COMPRAR</a></li>
-                <li><a href="">CATALOGO</a></li>
+                <li><a href="/assets/files/catalogo.html">CATALOGO</a></li>
                 <li><a href="">CONTACTO</a></li>
                 <li><a href="../files/login.html">INICIAR SESION</a></li>
                 <li><a href="/assets/files/carrito.html"><img src="../img/carrito.png" alt="carrito" id="carrito"></a></li>
@@ -24,12 +21,16 @@
         </nav>
     </header>
     <main>
-        <h1 class="titulo-principal">Nuestro Catalogo</h1>
-        <div class="catalogo" id="catalogo">
+        <h1>Carrito</h1>
+        <div class="contenedor-principal" id="contenedorPrincipal"></div>
+        <button class="btn agregar-btn">Agregar mas productos</button>
+        <div class="contenedor-precio">
+            <p>Cantidad de productos</p>
+            <p>Precio Total: 200</p>
+            <button class="btn">Continuar con la compra</button>
         </div>
     </main>
     <footer></footer>
-    <script src="/assets/js/catalogo.js"></script>
+    <script src="/assets/js/carrito.js"></script>
 </body>
-
 </html>
