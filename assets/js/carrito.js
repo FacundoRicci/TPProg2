@@ -1,12 +1,19 @@
 const contenedorPrincipal = document.getElementById("contenedorPrincipal");
+const contenedorPrecio = document.getElementById("contenedorPrecio");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let cantidadProductos = 0;
+let precioTotal = 0;
 
 renderizarCarrito();
+renderizarPrecios();
 
 function renderizarCarrito(){
 
     contenedorPrincipal.innerHTML = "";
+
+    cantidadProductos = 0;
+    precioTotal = 0;
 
     carrito.forEach(libro => {
 
@@ -28,6 +35,8 @@ function renderizarCarrito(){
             quitarLibro(libro.id);
         });
 
+        cantidadProductos++;
+        precioTotal += libro.precio;
         contenedorPrincipal.appendChild(div);
     });
 }
@@ -39,5 +48,16 @@ function quitarLibro(id){
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
+    cantidadProductos--;
+
     renderizarCarrito();
+    renderizarPrecios();
+}
+
+function renderizarPrecios(){
+    contenedorPrecio.innerHTML = `
+        <p>Cantidad de productos: ${cantidadProductos}</p>
+        <p>Precio Total: $${precioTotal}</p>
+        <button class="btn">Continuar con la compra</button>
+    `;
 }
