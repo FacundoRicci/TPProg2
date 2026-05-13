@@ -6,7 +6,6 @@ let cantidadProductos = 0;
 let precioTotal = 0;
 
 renderizarCarrito();
-renderizarPrecios();
 
 function renderizarCarrito(){
 
@@ -39,6 +38,7 @@ function renderizarCarrito(){
         precioTotal += libro.precio;
         contenedorPrincipal.appendChild(div);
     });
+    renderizarPrecios();
 }
 
 
@@ -48,10 +48,7 @@ function quitarLibro(id){
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
-    cantidadProductos--;
-
     renderizarCarrito();
-    renderizarPrecios();
 }
 
 function renderizarPrecios(){
