@@ -4,6 +4,7 @@ const btnCambioLogin = document.querySelector("#btnCambioLogin");
 const formularioRegistrarse = document.querySelector("#formularioRegistrarse");
 const btnCerrarSesion = document.querySelector("#cerrarSesion");
 const iniciarSesion = document.querySelector("#iniciarSesion");
+const paginaCarrito = document.querySelector("#paginaCarrito");
 
 btnCambioRegistrar.addEventListener("click", function () {
     formularioLogin.classList.toggle("invisible");
@@ -126,6 +127,7 @@ function comprobarLog() {
         iniciarSesion.classList.toggle("invisible");
         textoCartel.textContent = ("Bienvenido a la tienda online " + usuarioLogueado + "!");
         btnCerrarSesion.classList.toggle("invisible");
+        paginaCarrito.classList.toggle("invisible");
         
     }
 }

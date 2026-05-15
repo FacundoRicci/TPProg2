@@ -69,6 +69,18 @@ main {
   margin: 0 auto;
 }
 
+.section-footer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: auto;
+  padding: 2em;
+  font-size: 1.2em;
+  
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
 .invisible {
   display: none !important;
 }
