@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             </div>
         </section>
     </footer>
-      `)
+    `)
 })
 
 const btnCerrarSesion = document.querySelector("#cerrarSesion")
