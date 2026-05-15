@@ -76,54 +76,28 @@
                 <h2>Nuestros libros mas vendidos</h2>
             </div>
             <div class="mas-vendidos-contenedor-grid">
-                <div class="mas-vendidos contenedor">
-                    <img src="/assets/img/Libro.png" alt="">
-                    <h3>Harry potter</h3>
-                    <p class="precio">$2000</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
-                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
-                        fuga voluptas maxime nobis?</p>
-                </div>
-                <div class="mas-vendidos contenedor">
-                    <img src="/assets/img/Libro.png" alt="">
-                    <h3>Harry potter</h3>
-                    <p class="precio">$2000</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
-                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
-                        fuga voluptas maxime nobis?</p>
-                </div>
-                <div class="mas-vendidos contenedor">
-                    <img src="/assets/img/Libro.png" alt="">
-                    <h3>Harry potter</h3>
-                    <p class="precio">$2000</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
-                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
-                        fuga voluptas maxime nobis?</p>
-                </div>
-                <div class="mas-vendidos contenedor">
-                    <img src="/assets/img/Libro.png" alt="">
-                    <h3>Harry potter</h3>
-                    <p class="precio">$2000</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
-                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
-                        fuga voluptas maxime nobis?</p>
-                </div>
-                <div class="mas-vendidos contenedor">
-                    <img src="/assets/img/Libro.png" alt="">
-                    <h3>Harry potter</h3>
-                    <p class="precio">$2000</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
-                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
-                        fuga voluptas maxime nobis?</p>
-                </div>
-                <div class="mas-vendidos contenedor">
-                    <img src="/assets/img/Libro.png" alt="">
-                    <h3>Harry potter</h3>
-                    <p class="precio">$2000</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
-                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
-                        fuga voluptas maxime nobis?</p>
-                </div>
+                <script> 
+                    fetch("/db.json") 
+                    .then(response => response.json()) 
+                    .then(datos => { 
+                        const masVendidos = document.querySelector(".mas-vendidos-contenedor-grid");
+                            
+                        datos.productos.forEach(libro => { 
+                            const div = document.createElement("div"); 
+
+                            div.classList.add("mas-vendidos"); 
+                            div.classList.add("contenedor"); 
+
+                            div.innerHTML = `
+                                <img src="${libro.image}" alt="">
+                                <h3>${libro.name}</h3>
+                                <p class="precio">$${libro.precio}</p>
+                            `; 
+                            
+                            masVendidos.appendChild(div);
+                            });
+                        }); 
+                </script>
             </div>
         </section>
         <section class="quienes-somos" id="quienes-somos">
