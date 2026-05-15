@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     <header>
         <nav id="nav">
             <ul class="nav-a-href-1">
-                <li><a href="../../index.html">INICIO</a></li>
+                <li><a href="/index.html">INICIO</a></li>
                 <li><a href="#quienes-somos">QUIENES SOMOS</a></li>
-                <li><a href="./assets/files/catalogo.html">CATALOGO</a></li>
-                <li><a href="../assets/files/contactanos.html">CONTACTO</a></li>
+                <li><a href="/assets/files/catalogo.html">CATALOGO</a></li>
+                <li><a href="/assets/files/contactanos.html">CONTACTO</a></li>
             </ul>
             <ul class="nav-a-href-2"> 
                 <li>
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded',()=>{
                 </li>
             </ul>
             <ul class="nav-a-href-3">
-                <li><a href="./assets/files/login.html">INICIAR SESION</a></li>
-                <li><a href=""><img src="../assets/img/carrito.png" alt="carrito" id="carrito"></a></li>
+                <li><a href="/assets/files/login.html">INICIAR SESION</a></li>
+                <li><a href="/assets/files/carrito.html"><img src="/assets/img/carrito.png" alt="carrito" id="carrito"></a></li>
                 <li><button id="cerrarSesion" class="invisible">CERRAR SESION</button></li>
             </ul> 
             
