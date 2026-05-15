@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded',()=>{
             <div>
                 <ul>
                     <h5>Enlaces rapidos</h5>
-                    <li><a href="#nav">Inicio</a></li>
+                    <li><a href="/index.html">Inicio</a></li>
                     <li>Que nos distingue</li>
-                    <li>Catalogo</li>
-                    <li><a href="#nav">Iniciar sesion</a></li>
+                    <li><a href="/assets/files/catalogo.html">Catalogo</a></li>
+                    <li><a href="/assets/files/login.html">Iniciar sesion</a></li>
                 </ul>
             </div>
             <div>

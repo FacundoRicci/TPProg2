@@ -31,6 +31,7 @@ header{
   background-color: white;
   box-shadow: 0px 0px 25px 1px var(--color-text);
 }
+
 nav {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -196,7 +197,7 @@ main {
   border-radius: 10px;
   width: 60%; 
   margin: auto;
-  min-height: 400px;
+  height: 500px;
 }
 
 .precio {
