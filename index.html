@@ -16,23 +16,47 @@
 </head>
 
 <body>
+    <header>
+        <nav id="nav">
+            <ul class="nav-a-href-1">
+                <li><a href="../../index.html">INICIO</a></li>
+                <li><a href="#quienes-somos">QUIENES SOMOS</a></li>
+                <li><a href="./assets/files/catalogo.html">CATALOGO</a></li>
+                <li><a href="../assets/files/contactanos.html">CONTACTO</a></li>
+            </ul>
+            <ul class="nav-a-href-2">
+                <li>
+                    <a href="/index.html">
+                        <img src="/assets/img/logo.png" alt="logo">
+                        <h1>Book<span>ss</span>hop</h1>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-a-href-3">
+                <li><a id="iniciarSesion" href="./assets/files/login.html">INICIAR SESION</a></li>
+                <li><a id="paginaCarrito" class="invisible" href="./assets/files/carrito.html"><img src="../assets/img/carrito.png" alt="carrito" id="carrito"></a></li>
+                <li><button id="cerrarSesion" class="invisible">CERRAR SESION</button></li>
+            </ul>
 
+        </nav>
+    </header>
     <main>
         <div class="contenedor bann">
-        <!-- img incrustada desde css -->
+            <!-- img incrustada desde css -->
         </div>
         <section class="informacion">
             <div class="full">
                 <h2> Pasion por la lectura, cada libro un mundo</h2>
             </div>
             <div class="contenedor mitad uno">
-                “Explorá nuestra selección de libros pensada para lectores apasionados. Desde clásicos imperdibles hasta novedades que marcan tendencia.”
+                “Explorá nuestra selección de libros pensada para lectores apasionados. Desde clásicos imperdibles hasta
+                novedades que marcan tendencia.”
             </div>
             <div class="contenedor mitad dos">
-                
+
             </div>
             <div class="contenedor cuarto uno">
-                
+
             </div>
             <div class="contenedor cuarto dos">
                 orem ipsum dolor sit amet consectetur adipisicing elit. Labore corporis modi
@@ -52,46 +76,110 @@
                 <h2>Nuestros libros mas vendidos</h2>
             </div>
             <div class="mas-vendidos-contenedor-grid">
-                <script>
-                    fetch("/db.json")
-                    .then(response => response.json())
-                    .then(datos => {
-                    
-                        const masVendidos = document.querySelector(".mas-vendidos-contenedor-grid")
-                    
-                        datos.productos.forEach(libro => {
-
-                            const div = document.createElement("div");
-                        
-                            div.classList.add("mas-vendidos");
-                            div.classList.add("contenedor");
-                        
-                            div.innerHTML = `
-                                <img src="${libro.image}" alt="">
-                                <h3>${libro.name}</h3>
-                                <p class="precio">$${libro.precio}</p>
-                            `;
-
-                            masVendidos.appendChild(div);
-                        });
-                    });
-                </script>
+                <div class="mas-vendidos contenedor">
+                    <img src="/assets/img/Libro.png" alt="">
+                    <h3>Harry potter</h3>
+                    <p class="precio">$2000</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
+                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
+                        fuga voluptas maxime nobis?</p>
+                </div>
+                <div class="mas-vendidos contenedor">
+                    <img src="/assets/img/Libro.png" alt="">
+                    <h3>Harry potter</h3>
+                    <p class="precio">$2000</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
+                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
+                        fuga voluptas maxime nobis?</p>
+                </div>
+                <div class="mas-vendidos contenedor">
+                    <img src="/assets/img/Libro.png" alt="">
+                    <h3>Harry potter</h3>
+                    <p class="precio">$2000</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
+                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
+                        fuga voluptas maxime nobis?</p>
+                </div>
+                <div class="mas-vendidos contenedor">
+                    <img src="/assets/img/Libro.png" alt="">
+                    <h3>Harry potter</h3>
+                    <p class="precio">$2000</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
+                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
+                        fuga voluptas maxime nobis?</p>
+                </div>
+                <div class="mas-vendidos contenedor">
+                    <img src="/assets/img/Libro.png" alt="">
+                    <h3>Harry potter</h3>
+                    <p class="precio">$2000</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
+                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
+                        fuga voluptas maxime nobis?</p>
+                </div>
+                <div class="mas-vendidos contenedor">
+                    <img src="/assets/img/Libro.png" alt="">
+                    <h3>Harry potter</h3>
+                    <p class="precio">$2000</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium facilis? Cumque
+                        ex sequi deleniti molestiae animi unde nihil natus dolore mollitia! Amet repellat in distinctio
+                        fuga voluptas maxime nobis?</p>
+                </div>
             </div>
         </section>
         <section class="quienes-somos" id="quienes-somos">
-            <div class="contenedor" >
+            <div class="contenedor">
                 <h2>Quiénes somos</h2>
                 <p>
-                Somos una librería apasionada por los libros y la cultura. 
-                Nuestro objetivo es acercar a cada lector historias que inspiran, 
-                educan y entretienen. Desde clásicos universales hasta las últimas 
-                novedades, trabajamos para que cada visita sea una experiencia única.
+                    Somos una librería apasionada por los libros y la cultura.
+                    Nuestro objetivo es acercar a cada lector historias que inspiran,
+                    educan y entretienen. Desde clásicos universales hasta las últimas
+                    novedades, trabajamos para que cada visita sea una experiencia única.
                 </p>
             </div>
         </section>
 
 
     </main>
+    <footer>
+        <section class="section-footer">
+            <div>
+                <ul>
+                    <h5>Enlaces rapidos</h5>
+                    <li><a href="#nav">Inicio</a></li>
+                    <li>Que nos distingue</li>
+                    <li>Catalogo</li>
+                    <li><a href="#nav">Iniciar sesion</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h5>Contactanos</h5>
+                    <li>Zeballos 1341</li>
+                    <li>TP_UTN@gmail.com</li>
+                    <li>3413998877</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h5>Ayuda</h5>
+                    <li>Preguntas frecuentes</li>
+                    <li>Como comprar</li>
+                    <li>Boton de arrepentimiento</li>
+                    <li>Da tu opinion</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h5>Suscribirse al newsLetter</h5>
+                    <li>Enter email</li>
+                    <li>Enviar mensaje</li>
+                </ul>
+            </div>
+            <div>
+
+            </div>
+        </section>
+    </footer>
     <script src="/assets/js/main.js"></script>
 </body>
 
