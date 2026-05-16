@@ -1,8 +1,15 @@
 README
-# Proyecto e-commerce libreria Online 'Bookshop'. TP P2 1TUP4 UTN
+# Proyecto e-commerce libreria Online 'Bookshop'. TP P2 1TUP4 UTN.
 
 Este proyecto es una aplicacion web para la venta de libros.
-Incluye: HTML/CSS/JS y JSON server para el CRUD de datos.
+Incluye: 
+* HTML/CSS/JS y JSON server para el CRUD de datos.
+* Maquetacion con Flexbox y Grid en diferentes componentes.
+* Formulario con validacion para registrarse e ingreso de usuario.
+* Persistencia de datos.
+* Diseño responsive con algunas inconsistencias por falta de tiempo para desarrollarlo eficientemente.
+* Efectos de animacion en Nav, y tarjetas de productos en catalogo que incluyen transformacion, escalado y sombreado de elementos.
+* Implementacion de carrito de compras.
 
 # Instalacion (requisito previo: tener instalado JSON server)
 1. Clonar el siguiente repositorio en la carpeta deseada: git clone https://github.com/FacundoRicci/TPProg2.git
@@ -12,7 +19,7 @@ Incluye: HTML/CSS/JS y JSON server para el CRUD de datos.
 Para para el servidor cerramos la ventana de la consola o apretar CTRL + C
 
 # Indice
-Cuenta con 4 paginas: 1. Inicio  2. Iniciar sesion  3.Catalogo  4. Contacto
+Cuenta con 5 paginas: 1. Inicio  2. Iniciar sesion  3.Catalogo  4. Carrito  5. Contacto
 1. Inicio
     Pagina principal que cuenta con 5 secciones: 
     Nav. 
@@ -22,7 +29,8 @@ Cuenta con 4 paginas: 1. Inicio  2. Iniciar sesion  3.Catalogo  4. Contacto
     Footer con varios enlaces que sirven para navegar en la pagina en la lista 'Enlaces rapidos', las demas listas estan para simular un footer de una pagina real.
 
 2. Iniciar sesion
-
+    Maneja login, registro y cierre de sesion con validacion en tiempo real, integracion con JSON server y persistencia de sesion con LocalStorage. Validacion en tiempo real con usuario y contraseña con un minimo de 4 caracteres, ademas validacion de coincidencia
+    de contraseñas ingresadas para registrarse.
 
 3. Catalogo
     Muestra todos los libros que se encuentran dentro de la base de datos, obtenidos con fetch.
@@ -41,4 +49,4 @@ Cuenta con 4 paginas: 1. Inicio  2. Iniciar sesion  3.Catalogo  4. Contacto
 
 5. Contacto 
     El objetivo de esta pagina es simular un lugar fisico y datos de contacto. 
-    Ubicacion del local ficticio con una etiqueta I-frame, redes sociales, e-mail y Whatsapp.
+    Ubicacion del local ficticio con una etiqueta I-frame, redes sociales, e-mail y Whatsapp, estos ultimos tres no son interactivos.
