@@ -22,15 +22,19 @@ Cuenta con 4 paginas: 1. Inicio  2. Iniciar sesion  3.Catalogo  4. Contacto
     Footer con varios enlaces que sirven para navegar en la pagina en la lista 'Enlaces rapidos', las demas listas estan para simular un footer de una pagina real.
 
 2. Iniciar sesion
+    Pagina que le permite al usuario iniciar sesion o registrarse.
+    Guarda la informacion si es que hay algun usuario logueado y el nombre de usuario del mismo.
+    Cada vez que se registra un usuario se guarda su Usuario, Contraseña y Email en un archivo .json usado como base de datos, a la hora de loguearse se consulta el mismo para verificar si existe el usuario y contraseña ingresados.
+    Una vez iniciada sesion aparecera un cartel de bienvenida con el nombre de usuario hasta que el mismo cierre sesion.
+    Solo aparecera el cartel de cerrar sesion y el carrito  en el nav si es que hay un usuario logueado, de lo contrario aparecera solo iniciar sesion(En todas las paginas de la web).
 
-
-3. Catalogo
+4. Catalogo
     Muestra todos los libros que se encuentran dentro de la base de datos, obtenidos con fetch.
     Los estilos fueron hechos con CSS Flexbox.
     Al hacer click en el boton "Agregar al carrito", se guarda ese libro dentro de localStorage para luego ser mostrado dentro de la pagina propia del carrito.
     El header y el footer reutilizados de la pagina principal.
 
-4. Carrito
+5. Carrito
     Aparece solo si se encuentra logueado.
     Accede al localStorage en busca de libros agregados desde el Catalogo, en caso de que no haya ninguno, permanece vacio.
     Renderiza una lista con los libros agregados, especificando la cantidad de cada uno, y luego al final, hace una suma del precio total y de la cantidad total de libros.
@@ -39,6 +43,6 @@ Cuenta con 4 paginas: 1. Inicio  2. Iniciar sesion  3.Catalogo  4. Contacto
     Header y footer tambien reutilizados.
 
 
-5. Contacto 
+6. Contacto 
     El objetivo de esta pagina es simular un lugar fisico y datos de contacto. 
     Ubicacion del local ficticio con una etiqueta I-frame, redes sociales, e-mail y Whatsapp.
