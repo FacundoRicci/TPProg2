@@ -92,6 +92,7 @@ main {
   margin-top: auto;
   text-shadow: 1px 1px 10px rgba(0,0,0,0.4);
   transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .btn-agregar:hover{

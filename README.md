@@ -1,0 +1,48 @@
+README
+# Proyecto e-commerce libreria Online 'Bookshop'. TP P2 1TUP4 UTN
+
+Este proyecto es una aplicacion web para la venta de libros.
+Incluye: HTML/CSS/JS y JSON server para el CRUD de datos.
+
+# Instalacion (requisito previo: tener instalado JSON server)
+1. Clonar el siguiente repositorio en la carpeta deseada: git clone https://github.com/FacundoRicci/TPProg2.git
+2. Abrir en terminal la carpeta raiz y luego ejecutar el comando: npm install jason-server
+3. Ejectuar el comando: npx json-server
+4. Por ultima levantar el servidor con comando: npx json-server --watch db.json
+Para para el servidor cerramos la ventana de la consola o apretar CTRL + C
+
+# Indice
+Cuenta con 4 paginas: 1. Inicio  2. Iniciar sesion  3.Catalogo  4. Contacto
+1. Inicio
+    Pagina principal que cuenta con 5 secciones: 
+    Nav. 
+    Informacion, trabajada con Grid css.
+    Libros mas vendidos de forma hardcode.
+    Una pequena seccion quienes somos 
+    Footer con varios enlaces que sirven para navegar en la pagina en la lista 'Enlaces rapidos', las demas listas estan para simular un footer de una pagina real.
+
+2. Iniciar sesion
+    Pagina que le permite al usuario iniciar sesion o registrarse.
+    Guarda la informacion si es que hay algun usuario logueado y el nombre de usuario del mismo.
+    Cada vez que se registra un usuario se guarda su Usuario, Contraseña y Email en un archivo .json usado como base de datos, a la hora de loguearse se consulta el mismo para verificar si existe el usuario y contraseña ingresados.
+    Una vez iniciada sesion aparecera un cartel de bienvenida con el nombre de usuario hasta que el mismo cierre sesion.
+    Solo aparecera el cartel de cerrar sesion y el carrito  en el nav si es que hay un usuario logueado, de lo contrario aparecera solo iniciar sesion(En todas las paginas de la web).
+
+4. Catalogo
+    Muestra todos los libros que se encuentran dentro de la base de datos, obtenidos con fetch.
+    Los estilos fueron hechos con CSS Flexbox.
+    Al hacer click en el boton "Agregar al carrito", se guarda ese libro dentro de localStorage para luego ser mostrado dentro de la pagina propia del carrito.
+    El header y el footer reutilizados de la pagina principal.
+
+5. Carrito
+    Aparece solo si se encuentra logueado.
+    Accede al localStorage en busca de libros agregados desde el Catalogo, en caso de que no haya ninguno, permanece vacio.
+    Renderiza una lista con los libros agregados, especificando la cantidad de cada uno, y luego al final, hace una suma del precio total y de la cantidad total de libros.
+    Al hacer click en el boton "Quitar" se resta 1 de la cantidad del libro especifico, caso de haber solo 1, se elimina del carrito, y luego se actualiza el localStorage
+    Estilos hechos con CSS Flexbox
+    Header y footer tambien reutilizados.
+
+
+6. Contacto 
+    El objetivo de esta pagina es simular un lugar fisico y datos de contacto. 
+    Ubicacion del local ficticio con una etiqueta I-frame, redes sociales, e-mail y Whatsapp.

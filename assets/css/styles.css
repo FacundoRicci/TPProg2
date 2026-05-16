@@ -29,8 +29,9 @@ header{
   display: flex;
   justify-content: center;
   background-color: white;
-  box-shadow: 1px 11px 111px 1px var(--color-text);
+  box-shadow: 0px 0px 25px 1px var(--color-text);
 }
+
 nav {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -196,7 +197,7 @@ main {
   border-radius: 10px;
   width: 60%; 
   margin: auto;
-  min-height: 400px;
+  height: 500px;
 }
 
 .precio {
@@ -249,7 +250,7 @@ main {
   display: none !important;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .nav-a-href-2 {
   order: -1; 
   }
@@ -281,18 +282,19 @@ main {
 
   .mas-vendidos.contenedor.h2{
     font-size: 1em;
-    
-    
   }
 
   .mas-vendidos-contenedor-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 80%;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .mas-vendidos.contenedor{
-    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    gap: 10px;
   }
 
 

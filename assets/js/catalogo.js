@@ -22,7 +22,7 @@ fetch("/db.json")
 
             const boton = div.querySelector(".btn-agregar");
 
-            boton.addEventListener("click", () => {
+            boton.addEventListener("click", e => {
                 agregarCarrito(libro);
             });
 
