@@ -117,7 +117,7 @@ input {
   padding: 20px 20px 10px 10px;
   color: var(--color-text);
   font-size: 20px;
-  width: 100%;
+  width: 80%;
   margin-top: 5px;
   border: none;
   border-bottom: solid 1px #888;
@@ -125,6 +125,8 @@ input {
 
 .contenedorLogin {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   width: 85%;
   margin: 30px 0px;
 }
@@ -173,4 +175,26 @@ input {
   color: #fff;
   border-radius: 30px;
   background-color: var(--color-text);
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+  #formularioLogin {
+  width: 60%;
+}
+#formularioRegistrarse{
+  width: 60%;
+}
+}
+
+@media only screen and (max-width: 768px){
+  #formularioLogin {
+  width: 80%;
+}
+#formularioRegistrarse{
+  width: 80%;
+}
+.section-footer{
+  display: flex;
+  flex-direction: column;
+}
 }
